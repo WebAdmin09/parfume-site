@@ -5,6 +5,7 @@ const News = () => {
     return (
         <div className="new__wrapper">
             <div className="container">
+                    <h1>News Product</h1>
                 <div className="new__cards">
                     <div className="new__cards-item">
                         <Image className='imgcards' src={image} alt='name' />

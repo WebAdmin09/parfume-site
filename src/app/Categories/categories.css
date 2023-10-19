@@ -1,0 +1,17 @@
+.main__categories-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.main__categories{
+    margin-top: 150px;
+    text-align: center;
+}
+.new__cards-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 55px;
+}
