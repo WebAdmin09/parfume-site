@@ -19,10 +19,10 @@ const News = () => {
 
                     <div className="new__cards-item">
                         {
-                            ProductCard.map((news) => (
-                                <Image key={news.id} src={news.image} alt={news.name} />
-                                // <h3 className="new__card-h3">{name}</h3>
-                            ))
+                            // ProductCard.map((news) => (
+                            //     <Image key={news.id} src={news.image} alt={news.name} />
+                            //     // <h3 className="new__card-h3">{name}</h3>
+                            // ))
                         }
                     </div>
                 </div>
