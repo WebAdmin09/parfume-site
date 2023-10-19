@@ -1,6 +1,7 @@
 
 import Header from '@/components/layout/header/page'
 import HomePage from './home/page'
+import News from './news/page'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
     <main className={styles.main}>
       <Header />
       <HomePage />
+      <News />
     </main>
   )
 }

@@ -1,33 +1,38 @@
-import { useAppDispatch, useAppSelector } from '@/redux/hooks'
-import { getProductCard } from '@/redux/slices/NewSlice';
 import Image from 'next/image';
-import { useEffect, useState } from 'react'
 import './news.css'
+import image from '../../assets/cardsimg.jpg'
 const News = () => {
-
-    const { ProductCard, loading } = useAppSelector((state) => state.News);
-    const dispatch = useAppDispatch()
-
-    useEffect(() => {
-        dispatch(getProductCard());
-    }, [dispatch]);
-
     return (
         <div className="new__wrapper">
             <div className="container">
                 <div className="new__cards">
-
                     <div className="new__cards-item">
-                        {
-                            // ProductCard.map((news) => (
-                            //     <Image key={news.id} src={news.image} alt={news.name} />
-                            //     // <h3 className="new__card-h3">{name}</h3>
-                            // ))
-                        }
+                        <Image className='imgcards' src={image} alt='name' />
+                        <h3 className="new__card-h3">NameImg</h3>
+                    </div>
+                    <div className="new__cards-item">
+                        <Image className='imgcards' src={image} alt='name' />
+                        <h3 className="new__card-h3">NameImg</h3>
+                    </div>
+                    <div className="new__cards-item">
+                        <Image className='imgcards' src={image} alt='name' />
+                        <h3 className="new__card-h3">NameImg</h3>
+                    </div>
+                    <div className="new__cards-item">
+                        <Image className='imgcards' src={image} alt='name' />
+                        <h3 className="new__card-h3">NameImg</h3>
+                    </div>
+                    <div className="new__cards-item">
+                        <Image className='imgcards' src={image} alt='name' />
+                        <h3 className="new__card-h3">NameImg</h3>
+                    </div>
+                    <div className="new__cards-item">
+                        <Image className='imgcards' src={image} alt='name' />
+                        <h3 className="new__card-h3">NameImg</h3>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
