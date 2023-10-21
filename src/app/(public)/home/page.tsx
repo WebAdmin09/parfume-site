@@ -1,6 +1,7 @@
+'use client'
+import NavLink from '@/components/shares/NavLink'
 import './homestyle.css'
-import Image from 'next/image'
-import backimg from '../../assets/parfume__backimg.jpg'
+
 
 
 const HomePage = () => {
@@ -11,7 +12,9 @@ const HomePage = () => {
           <div className="home__texts">
             <h6 className='home__h6'>Lorem ipsum dolor sit amet consectetur.</h6>
             <h1 className='home__title'><span className='title__span0'>Lore</span>m ips<span className='title__span'>um do</span><span className='title__span2'>lor sit.</span> </h1>
-            <button className='home__btn'>Show All</button>
+            <div className='home__btn'>
+              <NavLink href='/parfumes'>Show All</NavLink>
+            </div>
           </div>
         </div>
         <div>

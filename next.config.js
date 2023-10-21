@@ -5,6 +5,9 @@ const nextConfig = {
           './components/**/*.{js,ts,jsx,tsx}',
           './app/**/*.{js,ts,jsx,tsx}',
         ],
+        images: {
+          domains: ["uploads-ssl.webflow.com", "res.cloudinary.com"],
+        },
         theme: {
           extend: {
             fontFamily: {
