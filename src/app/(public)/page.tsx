@@ -1,23 +1,15 @@
-
+// 'use client'
 import request from '@/api'
-import NewsCard from '@/components/cards/newsCard'
-import NewsType from '@/types/news'
 import HomePage from './home/page'
 import axios from 'axios'
-// import '@/global.css'
 import { Fragment } from 'react'
 import CategoryCard from '@/components/cards/CategoryCard'
 import CategoryType from '@/types/category'
+import NewsPage from './news/page'
 
 const Home = async () => {
   try {
-    // const { data } = await request.get<NewsType[]>('last-products')
-
     const { data } = await request.get<CategoryType[]>("category");
-
-    // const { data }: AxiosResponse<NewsType[]> = await request.get("/last-products");
-
-
     return (
       <Fragment>
         <main className='container'>
@@ -25,14 +17,7 @@ const Home = async () => {
             <HomePage />
           </section>
           <section className='news__section'>
-            <div className="new__wrapper">
-              <h1 className='news__heading'><span className='news_span'>News</span> <i>Products</i></h1>
-              {/* <div className="new__cards">
-                {data.map((news) => (
-                  <NewsCard key={news._id} {...news} />
-                ))}
-              </div> */}
-            </div >
+            <NewsPage />
           </section>
           <section>
             <h1 className="category__card-heading"><i>Products Categories</i></h1>

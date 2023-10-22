@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 const NavLink = (props: { href: string; children: React.ReactNode }) => {
   let pathName = usePathname();
   return (
-    <Link style={{color: 'blueviolet'}} {...props} className={pathName === props.href ? "active" : ""}>
+    <Link style={{ color: 'blueviolet' }} {...props} className={pathName === props.href ? "active" : ""}>
       {props.children}
     </Link>
   );

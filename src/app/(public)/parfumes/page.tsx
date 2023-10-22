@@ -7,7 +7,7 @@ import CategoryType from "@/types/category";
 import ProductType from "@/types/product";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
-
+import './product.css'
 const Products = () => {
   const router = useRouter();
   const search = useSearchParams();
@@ -51,19 +51,21 @@ const Products = () => {
   };
 
   return (
-    <section>
-      <h1 className="text-center my-3">Products {total}</h1>
-      <div>
-        <select value={category} onChange={handleCategory}>
-          <option value="">All</option>
-          {categories.map((category) => (
-            <option key={category._id} value={category._id}>
-              {category.name}
-            </option>
-          ))}
-        </select>
+    <section className="mian__product-section">
+      <div className="container">
+        <h1 className="text-center my-3">Products {total}</h1>
+        <div>
+          <select value={category} onChange={handleCategory}>
+            <option value="">All</option>
+            {categories.map((category) => (
+              <option key={category._id} value={category._id}>
+                {category.name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <ProductsRow loading={loading} products={products} />
       </div>
-      <ProductsRow loading={loading} products={products} />
     </section>
   );
 };

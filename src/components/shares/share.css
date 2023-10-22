@@ -1,0 +1,8 @@
+.product__row {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 50px;
+}
