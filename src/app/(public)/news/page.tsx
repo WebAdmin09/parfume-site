@@ -35,7 +35,6 @@ const NewsPage = () => {
                             <Swiper
                                 spaceBetween={20}
                                 slidesPerView={4}
-                                autoplay={{ delay: 2000 }}
                                 onSlideChange={() => console.log('slide change')}
                             // onSwiper={(swiper) => console.log(swiper)}
                             >
