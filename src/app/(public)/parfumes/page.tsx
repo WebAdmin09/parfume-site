@@ -53,16 +53,20 @@ const Products = () => {
   return (
     <section className="mian__product-section">
       <div className="container">
-        <h1 className="text-center my-3">Products {total}</h1>
-        <div>
-          <select value={category} onChange={handleCategory}>
-            <option value="">All</option>
-            {categories.map((category) => (
-              <option key={category._id} value={category._id}>
-                {category.name}
-              </option>
-            ))}
-          </select>
+        <div className="item__product">
+          <span className="allproduct">All Products: {total}</span>
+          <h1 className="heading__product">Products</h1>
+          <div className="select">
+            <select className="select__input" value={category} onChange={handleCategory}>
+              <option value="">All</option>
+              {categories.map((category) => (
+                <option key={category._id} value={category._id}>
+                  {category.name}
+                </option>
+              ))}
+            </select>
+          </div>
+
         </div>
         <ProductsRow loading={loading} products={products} />
       </div>

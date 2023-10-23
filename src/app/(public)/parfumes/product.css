@@ -1,4 +1,4 @@
-.mian__product-section{
+.mian__product-section {
     background-image: url('../../../assets/back__img__product.jpg');
     margin-top: 50px;
     background-position: center;
@@ -6,4 +6,28 @@
     background-size: cover;
     height: 100%;
     height: 850px;
+}
+
+.heading__product {
+    text-align: center;
+    color: brown;
+    font-size: 27px;
+}
+
+.allproduct {
+    color: blueviolet;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.select__input {
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.item__product{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }

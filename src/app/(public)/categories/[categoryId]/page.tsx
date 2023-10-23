@@ -27,13 +27,27 @@ const CategoryPage = async ({ params: { categoryId } }: Params) => {
   });
 
   return (
-    <div>
-      <div className="relative w-50 mx-auto" style={{ height: "200px" }}>
-        <Image src={data.image.url} fill alt={data.name} objectFit="contain" />
+    <div className="container">
+      <div className="categorypage">
+        <Image
+          className="categoryimg"
+          src={data.image.url}
+          width={250}
+          height={200}
+          alt={data.name}
+          objectFit="contain" />
+        <div className="item__text">
+          <h2 className="h2__category">PRODUCT NAME</h2>
+          <hr className="hr" />
+          <span className="span__category">{data.name.split('lar')}</span>
+        </div>
       </div>
-      <h1 className="text-center my-6">
-        {data.name} ({total})
-      </h1>
+      <div className="heading__item">
+        <h1 className="heading__category">
+          {data.name}
+        </h1>
+        <span className="total__category">All Products: ({total})</span>
+      </div>
       <ProductsRow products={products} />
     </div>
   );
