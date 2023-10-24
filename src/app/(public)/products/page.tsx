@@ -1,6 +1,5 @@
 "use client";
 
-import ProductCard from "@/components/cards/ProductCard";
 import ProductsRow from "@/components/shares/ProductsRow";
 import request from "@/api";
 import CategoryType from "@/types/category";
