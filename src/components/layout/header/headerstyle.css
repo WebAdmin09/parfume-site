@@ -3,10 +3,13 @@
     justify-content: space-between;
     align-items: center;
 }
-
+.header__main-wrapper{
+    position: relative;
+}
 .image-logo {
     max-width: 280px;
     max-height: 100px;
+    margin-left: 500px;
 }
 
 .header__btn {

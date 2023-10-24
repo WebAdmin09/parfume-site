@@ -16,7 +16,7 @@ const ProductsRow = ({ loading, products }: ProductsRowProps) => {
           <div><Loading /></div>
         ) : (
           products.map((product) => (
-            <ProductCard key={product._id} {...product} />
+            <ProductCard key={product?._id} {...product} />
           ))
         )}
       </div>

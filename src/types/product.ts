@@ -13,6 +13,7 @@ interface ProductType {
   category: CategoryType;
   createdAt: string;
   updatedAt: string;
+  search?: (value: string) => void;
 }
 
 export default ProductType;

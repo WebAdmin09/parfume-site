@@ -8,6 +8,7 @@ import ProductType from "@/types/product";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
 import './product.css'
+import Search from 'antd/es/input/Search'
 const Products = () => {
   const router = useRouter();
   const search = useSearchParams();
@@ -16,7 +17,7 @@ const Products = () => {
   const [loading, setLoading] = useState(false);
   const [categories, setCategories] = useState([] as CategoryType[]);
   const [category, setCategory] = useState(search.get("category") || "");
-
+  const [data, setData] = useState([])
   useEffect(() => {
     const getProducts = async () => {
       try {
@@ -29,7 +30,7 @@ const Products = () => {
         );
         const { data } = await request.get("category");
         setCategories(data);
-
+        setData(data.data)
         setProducts(products);
         setTotal(total);
       } catch (error) {
@@ -49,10 +50,25 @@ const Products = () => {
       router.push(`products?category=${value}`);
     }
   };
-
+  const handleSearch = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    try {
+      const response = await request.get(`product?search=${e.target.value}`);
+      setData(response.data)
+      // console.log(response.data.products.title);
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <section className="mian__product-section">
       <div className="container">
+        <div className="header__search">
+          <Search
+            onChange={handleSearch}
+            className='header__input'
+            size="large"
+            placeholder="Searching...." />
+        </div>
         <div className="item__product">
           <span className="allproduct">All Products: {total}</span>
           <h1 className="heading__product">Products</h1>

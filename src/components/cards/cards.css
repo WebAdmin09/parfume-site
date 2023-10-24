@@ -130,3 +130,9 @@
     font-size: large;
     font-weight: bold;
 }
+
+.header__search{
+    max-width: 280px; 
+    position: absolute;
+    top: 50px;
+}

@@ -1,11 +1,15 @@
+import request from "@/api";
 import ProductType from "@/types/product";
+import Search from "antd/es/input/Search";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
 import './cards.css'
-const ProductCard = ({ title, image, price, _id }: ProductType) => {
+const ProductCard = ({ title, image, price, _id, }: ProductType) => {
+
   return (
     <Fragment>
+
       <div className="product-card">
         <Image
           className="product__image"
