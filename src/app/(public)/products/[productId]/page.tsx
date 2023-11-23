@@ -39,4 +39,4 @@ const Product = async ({ params: { productId } }: Params) => {
   )
 }
 
-export default Product
+export default getProductId

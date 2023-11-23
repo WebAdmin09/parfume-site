@@ -9,7 +9,7 @@ import NewsPage from './news/page'
 
 const Home = async () => {
   try {
-    const { data } = await request.get<CategoryType[]>("category");
+    const {data} = await request.get<CategoryType[]>("category");
     return (
       <Fragment>
         <main className='container'>
