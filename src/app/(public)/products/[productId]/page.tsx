@@ -6,7 +6,7 @@ import ProductType from "@/types/product"
 import Image from "next/image"
 import '../product.css'
 
-async function getProductId({
+export async function getProductId({
   params: { productId },
 }: MetadataParams) {
   const { data } = await request.get<ProductType>(`product/${productId}`)
@@ -39,4 +39,3 @@ const Product = async ({ params: { productId } }: Params) => {
   )
 }
 
-export default getProductId
