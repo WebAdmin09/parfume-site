@@ -1,0 +1,22 @@
+.contact__heading {
+    margin-top: 50px;
+    color: #b03434;
+}
+
+.contact__wrapper-item {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 50px 0;
+    column-gap: 20px;
+}
+
+.contact-span {
+    font-weight: 600px;
+    font-size: 25px;
+    margin-left: 80px;
+}
+
+.contact-h5 {
+    font-size: 25px;
+    color: blueviolet;
+}

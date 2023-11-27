@@ -17,14 +17,14 @@ const PublicHeader = () => {
     console.log(router);
     console.log(pathName);
 
-    
+
 
     return (
         <div className='heder__main-wrapper'>
             <div className="container">
                 <div className="header__wrapper">
                     <div className="header__logotip">
-                        <Image className='image-logo'src={logojon} alt="logotip" />
+                        <Image className='image-logo' src={logojon} alt="logotip" />
                     </div>
                     <div className='header__btn'>
                         <div className='login'>
@@ -32,7 +32,7 @@ const PublicHeader = () => {
                         </div>
                         <div className='account'>
                             <UserOutlined />
-                            <NavLink href="/register">Account</NavLink>
+                            <NavLink href="/register">Register  </NavLink>
                         </div>
                         <span className='like'>
                             <HeartOutlined /> Wishlist
