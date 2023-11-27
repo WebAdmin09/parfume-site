@@ -6,7 +6,7 @@ import ProductType from "@/types/product"
 import Image from "next/image"
 import '../product.css'
 
-export async function getProductId({
+async function getProductId({
   params: { productId },
 }: MetadataParams) {
   const { data } = await request.get<ProductType>(`product/${productId}`)
